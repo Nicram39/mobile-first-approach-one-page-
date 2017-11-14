@@ -1,0 +1,243 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px;
+  font-family: Arial, sans-serif; }
+
+body {
+  font-size: 1.4rem; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+#cover {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(36, 32, 32, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+header {
+  width: 100%;
+  height: 30vh;
+  background: url("../img/krowa.jpeg") center/cover no-repeat;
+  color: #fff;
+  line-height: 3rem; }
+  header p, header .button {
+    display: none; }
+  header h1 {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
+    top: 12%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5rem; }
+
+nav {
+  overflow: hidden;
+  position: static;
+  top: 0;
+  left: 0; }
+  nav ul li a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    margin: 0.2rem;
+    font-size: 1.5rem;
+    background-color: #232858;
+    color: white;
+    letter-spacing: 1.005rem; }
+
+section {
+  padding: 2rem;
+  margin-top: 4rem;
+  text-align: justify;
+  min-height: 300px; }
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem; }
+
+section p {
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem; }
+
+section:nth-of-type(even) {
+  background: url("../img/moon.jpeg") center/cover no-repeat fixed;
+  color: white; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.sprites {
+  border: 1px solid red;
+  background: url("sprites.png");
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  overflow: hidden; }
+
+.sprites_media {
+  background: url("../img/sprites_spolecznosciowe.png");
+  width: 43px;
+  height: 42px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  left: 30%; }
+
+div.facebook {
+  background-position: 0px -43px; }
+
+div.twitter {
+  background-position: -52px -43px; }
+
+div.youtube {
+  background-position: -104px -43px; }
+
+div.in {
+  background-position: -155px -43px; }
+
+@media only screen and (min-width: 768px) {
+  #cover {
+    width: 100%;
+    height: 100vh; }
+
+  header {
+    width: 100%;
+    height: 100vh; }
+    header p, header .button {
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+      word-spacing: 0.4rem;
+      letter-spacing: 0.3rem; }
+
+  header h1 {
+    top: 25%;
+    font-size: 4rem; }
+
+  header p {
+    font-size: 2rem;
+    top: 40%;
+    line-height: 3.5rem; }
+
+  header .button {
+    display: block;
+    top: 70%;
+    left: 0;
+    right: 0;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    box-shadow: 0 0 15px 2.5px #fff;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(#232858, #a6abce); }
+    header .button:hover {
+      box-shadow: 0 0 10px white; }
+
+  nav {
+    position: sticky; }
+    nav ul li a {
+      display: block;
+      float: left;
+      width: 25%;
+      margin: 0;
+      border-bottom: 2px solid transparent;
+      transition: all 1s ease; }
+      nav ul li a:hover {
+        border-bottom: 2px solid #fff;
+        background-color: rgba(8, 27, 64, 0.79); }
+
+  .sprites_media {
+    left: 75%; }
+
+  div.facebook {
+    background-position: 0px -1px;
+    transition: all 0.25s linear; }
+
+  div.facebook:hover {
+    background-position: 0px -43px; }
+
+  div.twitter {
+    background-position: -52px -1px;
+    transition: all 0.25s linear; }
+
+  div.twitter:hover {
+    background-position: -52px -43px; }
+
+  div.youtube {
+    background-position: -104px -1px;
+    transition: all 0.25s linear; }
+
+  div.youtube:hover {
+    background-position: -104px -43px; }
+
+  div.in {
+    background-position: -155px -1px;
+    transition: all 0.25s linear; }
+
+  div.in:hover {
+    background-position: -155px -43px; } }
